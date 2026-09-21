@@ -12,11 +12,11 @@
 
 /* -------- COLOR & FONT SETTINGS (edit these first!) -------- */
 :root {
-  --color-bg:      #fff;   /* page background        */
-  --color-text:    #1a1a1a;   /* main text color        */
-  --color-accent:  #2563eb;   /* links & buttons        */
-  --color-muted:   #6b7280;   /* softer/secondary text  */
-  --color-card:    #f3f4f6;   /* project card background */
+  --color-bg:      #092328;   /* page background        */
+  --color-text:    #fff;   /* main text color        */
+  --color-accent:  #092328;   /* links & buttons        */
+  --color-muted:   #2A835F;   /* softer/secondary text  */
+  --color-card:    #2A835F;   /* project card background */
 
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 900px;         /* how wide the content gets */
@@ -98,6 +98,7 @@ a:hover {
 .button:hover {
   opacity: 0.9;
   text-decoration: none;
+  color: #2A835F;
 }
 
 /* -------- GENERAL SECTIONS -------- */
