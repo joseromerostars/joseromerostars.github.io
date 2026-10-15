@@ -1,25 +1,10 @@
 <!DOCTYPE html>
-<!--
-  ============================================================
-  PORTFOLIO STARTER TEMPLATE
-  ============================================================
-  How to use this file:
-  1. Replace anything in [SQUARE BRACKETS] with your own info.
-  2. Save the file.
-  3. Refresh your browser to see changes.
-
-  Tip: Search for "REPLACE" to find every spot you need to edit.
-  ============================================================
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- REPLACE: This shows in the browser tab -->
+  <meta name="description" content="Jose Romero — software developer, mentor to 400+ CS students, and winning pitch presenter. Milwaukee, WI." />
   <title>Jose Romero — Portfolio</title>
-
-  <!-- This links your styles.css file to this page -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,12 +12,10 @@
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="navbar">
-    <!-- REPLACE: your name or a logo/initials -->
     <a href="#top" class="nav-logo">JDR</a>
-
-    <!-- These links jump to sections further down the page -->
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
@@ -40,29 +23,52 @@
 
   <!-- ===================== HERO / INTRO ===================== -->
   <header id="top" class="hero">
-    <!-- REPLACE: your name -->
+    <p class="eyebrow">Software Developer &middot; Mentor &middot; Milwaukee, WI</p>
     <h1>Hi, I'm Jose Romero!</h1>
+    <p class="tagline">I build software, teach it to hundreds of people, and win rooms over with a good demo.</p>
 
-    <!-- REPLACE: one sentence about who you are -->
-    <p class="tagline">Software delevoper, learning through building.</p>
+    <div class="hero-actions">
+      <a href="#experience" class="button">See My Experience</a>
+      <a href="#projects" class="button button-ghost">See My Work</a>
+    </div>
 
-    <a href="#projects" class="button">See My Work</a>
+    <!-- Brag strip: numbers pulled straight from my experience -->
+    <ul class="stats" aria-label="Career highlights">
+      <li class="stat">
+        <span class="stat-num" data-count="400" data-suffix="+">400+</span>
+        <span class="stat-label">CS students mentored</span>
+      </li>
+      <li class="stat">
+        <span class="stat-num">1<small> of </small>4</span>
+        <span class="stat-label">Teams &mdash; my pitch won</span>
+      </li>
+      <li class="stat">
+        <span class="stat-num" data-count="3">3</span>
+        <span class="stat-label">Orgs: tech, edtech &amp; adtech</span>
+      </li>
+      <li class="stat">
+        <span class="stat-num" data-count="10" data-suffix="">10</span>
+        <span class="stat-label">Week Python course taught</span>
+      </li>
+    </ul>
   </header>
 
   <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <h2>About Me</h2>
-    <!-- REPLACE: 2-3 sentences about your background, goals, and what you're learning -->
-     
     <p>
       I'm born and raised in Chicago, IL but currently call Milwaukee, WI home.
-      I love learning, and it's a life long hobby of mine. I enjoy learning facts about 
-      animals, history, and of course, technology. I aspire to be a software developer 
+      I love learning, and it's a life long hobby of mine. I enjoy learning facts about
+      animals, history, and of course, technology. I aspire to be a software developer
       building efficient tools that solve problems and serve a purpose.
+    </p>
+    <p class="about-extra">
+      My path: I started in <strong>digital advertising at The Trade Desk</strong>, taught myself to code,
+      went on to <strong>mentor 400+ students at CodePath</strong> while shipping production Python, and now
+      I'm an <strong>intern at i.c.stars</strong> designing real software for a real client &mdash; and winning pitches doing it.
     </p>
 
     <h3>Skills</h3>
-    <!-- REPLACE: add or remove skills as a simple list -->
     <ul class="skills-list">
       <li>HTML</li>
       <li>CSS</li>
@@ -72,36 +78,110 @@
       <li>Java</li>
       <li>MySQL</li>
       <li>Python</li>
+      <li>Data Structures &amp; Algorithms</li>
+      <li>Wireframing</li>
+      <li>Code Review</li>
+      <li>Technical Mentoring</li>
     </ul>
   </section>
 
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="section reveal">
+    <h2>Experience</h2>
+    <p class="section-intro">Where I've worked, what I shipped, and what I'm proudest of.</p>
+
+    <ol class="timeline">
+
+      <!-- i.c.stars -->
+      <li class="job">
+        <div class="job-header">
+          <div>
+            <h3>Intern</h3>
+            <p class="company">i.c.stars <span class="job-type">&middot; Internship</span></p>
+          </div>
+          <p class="job-meta">Aug 2026 &ndash; Present<br /><span>Milwaukee, WI &middot; Hybrid</span></p>
+        </div>
+
+        <p class="win">&#127942; Won the Sprint 1 pitch against 3 other teams &mdash; the client named my demo walkthrough as a major factor in their decision.</p>
+
+        <ul class="job-bullets">
+          <li>Designed wireframes for an <strong>ITIL ticket analytics web app</strong> for a client's project management teams: ticket lookup by ID, filtering by type, and trend views.</li>
+          <li>Delivered the <strong>winning Sprint 1 pitch</strong> out of 4 competing teams with a wireframe-based technical demo.</li>
+          <li>Scoping a <strong>RAG-based natural-language ticket search</strong> limited to the client's own data, plus secure access via password login and <strong>Microsoft SSO</strong>.</li>
+        </ul>
+        <ul class="tags">
+          <li>JavaScript</li><li>HTML</li><li>Wireframing</li><li>RAG</li><li>Microsoft SSO</li><li>ITIL</li>
+        </ul>
+      </li>
+
+      <!-- CodePath -->
+      <li class="job">
+        <div class="job-header">
+          <div>
+            <h3>Tech Fellow</h3>
+            <p class="company">CodePath</p>
+          </div>
+          <p class="job-meta">Jan 2025 &ndash; Feb 2026<br /><span>Remote</span></p>
+        </div>
+
+        <p class="win">&#127891; Mentored 400+ computer science students through a 10-week Python data structures course.</p>
+
+        <ul class="job-bullets">
+          <li>Guided students through <strong>pair programming, debugging, and runtime analysis</strong> of recursion, trees, linked lists, and stacks.</li>
+          <li>Contributed <strong>production code</strong> to CodePath's internal Python codebase, partnering with senior engineers in code reviews to refactor inefficient algorithms and improve performance and readability.</li>
+          <li>Raised the bar on <strong>clean, maintainable Python</strong> across hundreds of student projects by teaching idiomatic patterns, modular design, and effective use of built-in data structures.</li>
+        </ul>
+        <ul class="tags">
+          <li>Python</li><li>Algorithms</li><li>Data Structures</li><li>Teaching</li><li>Code Review</li>
+        </ul>
+      </li>
+
+      <!-- The Trade Desk -->
+      <li class="job">
+        <div class="job-header">
+          <div>
+            <h3>Account Coordinator</h3>
+            <p class="company">The Trade Desk <span class="job-type">&middot; Full-time</span></p>
+          </div>
+          <p class="job-meta">Jun 2022 &ndash; Aug 2023<br /><span>Chicago, IL &middot; Hybrid</span></p>
+        </div>
+
+        <p class="win">&#128200; Kept digital ad campaigns running smoothly at one of the world's leading ad tech companies.</p>
+
+        <ul class="job-bullets">
+          <li>Supported digital advertising campaigns by coordinating with internal teams and helping execute and <strong>optimize client accounts</strong>.</li>
+          <li>Worked cross-functionally with technical and client-facing teams to <strong>identify and resolve campaign issues</strong>, keeping delivery and performance on track.</li>
+          <li>Analyzed campaign data and performance trends to <strong>inform decisions</strong> and improve outcomes for clients.</li>
+        </ul>
+        <ul class="tags">
+          <li>Troubleshooting</li><li>Quality Assurance</li><li>Data Analysis</li><li>Client Success</li>
+        </ul>
+      </li>
+
+    </ol>
+  </section>
+
   <!-- ===================== PROJECTS ===================== -->
-  <section id="projects" class="section">
+  <section id="projects" class="section reveal">
     <h2>Projects</h2>
 
     <div class="project-grid">
 
-      <!-- PROJECT CARD 1 — copy this whole block to add more projects -->
       <article class="project-card">
-        <!-- REPLACE: project name -->
         <h3>Affirmation Generator</h3>
-        <!-- REPLACE: 1-2 sentences on what it is and what you built -->
         <p>
-          Built with HTML, CSS, and JavaScript, this project aims to give people an 
+          Built with HTML, CSS, and JavaScript, this project aims to give people an
           easy avenue to building a positive affirmation practice.
         </p>
-        <!-- REPLACE: link to the live site or GitHub repo -->
         <a href="https://jdrome.github.io/Affirmations-Generator/" class="project-link">View Project</a>
       </article>
 
-      <!-- PROJECT CARD 2 -->
       <article class="project-card">
         <h3>Scrunch</h3>
         <p>A remix on the classic game, snake, built with Java.</p>
         <a href="https://github.com/jdome/Scrunch" class="project-link">View Project</a>
       </article>
 
-      <!-- PROJECT CARD 3 -->
       <article class="project-card">
         <h3>Oro</h3>
         <p>A personal finance app (in development) being built with Java.</p>
@@ -112,12 +192,11 @@
   </section>
 
   <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section">
+  <section id="contact" class="section reveal">
     <h2>Get In Touch</h2>
     <p>Want to work together or just say hi? Reach out.</p>
 
     <ul class="contact-list">
-      <!-- REPLACE: your real links. Delete any you don't use. -->
       <li><a href="mailto:josedanilromero@gmail.com">Email</a></li>
       <li><a href="https://github.com/jdrome">GitHub</a></li>
       <li><a href="https://linkedin.com/in/josedanilromero">LinkedIn</a></li>
@@ -126,9 +205,36 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <!-- REPLACE: your name -->
     <p>&copy; 2026 Jose Romero. Built with HTML, CSS, and GitHub Pages.</p>
   </footer>
+
+  <!-- Small bit of polish: scroll reveal + count-up numbers. Page works fine without it. -->
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;
+
+      document.documentElement.classList.add('js');
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal, .job').forEach(function (el) { io.observe(el); });
+
+      document.querySelectorAll('[data-count]').forEach(function (el) {
+        var target = +el.dataset.count, suffix = el.dataset.suffix || '', t0 = null;
+        function tick(t) {
+          if (!t0) t0 = t;
+          var p = Math.min((t - t0) / 1200, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    })();
+  </script>
 
 </body>
 </html>

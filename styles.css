@@ -17,6 +17,8 @@
   --color-accent:  #092328;   /* links & buttons        */
   --color-muted:   #2A835F;   /* softer/secondary text  */
   --color-card:    #2A835F;   /* project card background */
+  --color-glow:    rgba(42, 131, 95, 0.35);  /* soft green tint of --color-muted */
+  --color-line:    rgba(255, 255, 255, 0.12);
 
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 900px;         /* how wide the content gets */
@@ -28,6 +30,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
 
 body {
   font-family: var(--font-main);
@@ -51,9 +55,10 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--color-line);
   position: sticky;      /* stays at top when you scroll */
   top: 0;
+  z-index: 10;
   background-color: var(--color-bg);
 }
 
@@ -71,34 +76,63 @@ a:hover {
 /* -------- HERO / INTRO SECTION -------- */
 .hero {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 4rem;
+  background: radial-gradient(ellipse at 50% 0%, var(--color-glow), transparent 65%);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 
 .tagline {
   font-size: 1.2rem;
   color: var(--color-muted);
-  margin-bottom: 2rem;
+  max-width: 34rem;
+  margin: 0 auto 2rem;
 }
 
 /* -------- BUTTONS -------- */
 .button {
   display: inline-block;
-  background-color: var(--color-accent);
+  background-color: var(--color-muted);
+  border: 2px solid var(--color-muted);
   color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   font-weight: 600;
 }
 
+
 .button:hover {
-  opacity: 0.9;
   text-decoration: none;
-  color: #2A835F;
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+.button-ghost {
+  background-color: transparent;
+  border-color: var(--color-line);
 }
 
 /* -------- GENERAL SECTIONS -------- */
@@ -146,6 +180,12 @@ a:hover {
   background-color: var(--color-card);
   padding: 1.5rem;
   border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .project-card h3 {
@@ -156,6 +196,8 @@ a:hover {
   display: inline-block;
   margin-top: 1rem;
   font-weight: 600;
+  color: #fff;
+  border-bottom: 2px solid var(--color-bg);
 }
 
 /* -------- CONTACT LIST -------- */
@@ -166,13 +208,172 @@ a:hover {
   margin-top: 1rem;
 }
 
+.contact-list a {
+  color: var(--color-text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-muted);
+}
+
+.contact-list a:hover {
+  text-decoration: none;
+  background-color: var(--color-muted);
+}
+
 /* -------- FOOTER -------- */
 .footer {
   text-align: center;
   padding: 2rem;
   color: var(--color-muted);
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--color-line);
   margin-top: 2rem;
+}
+
+/* -------- STATS STRIP (hero) -------- */
+.stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: var(--max-width);
+  margin: 3.5rem auto 0;
+}
+
+.stat {
+  background-color: rgba(42, 131, 95, 0.18);
+  border: 1px solid var(--color-muted);
+  border-radius: 10px;
+  padding: 1.2rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-num {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.stat-num small { font-size: 1rem; font-weight: 600; color: var(--color-muted); }
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* -------- ABOUT EXTRA -------- */
+.about-extra { margin-top: 1rem; }
+.about-extra strong { color: #fff; border-bottom: 2px solid var(--color-muted); }
+
+.section-intro { color: var(--color-muted); margin-bottom: 1.5rem; }
+
+/* -------- EXPERIENCE TIMELINE -------- */
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-muted);
+  margin-left: 0.5rem;
+}
+
+.job {
+  position: relative;
+  background-color: rgba(42, 131, 95, 0.12);
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job:last-child { margin-bottom: 0; }
+
+/* the glowing dot on the timeline line */
+.job::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem - 8px);
+  top: 1.9rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 3px solid var(--color-muted);
+  box-shadow: 0 0 0 4px var(--color-glow);
+}
+
+.job:hover {
+  border-color: var(--color-muted);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.section .job h3 { margin: 0; font-size: 1.35rem; }
+
+.company { font-weight: 600; color: var(--color-muted); }
+.job-type { font-weight: 400; color: rgba(255, 255, 255, 0.6); }
+
+.job-meta { text-align: right; font-weight: 600; font-size: 0.95rem; }
+.job-meta span { font-weight: 400; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; }
+
+/* the "gloat" line: one headline win per role */
+.win {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-muted);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.job-bullets {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.job-bullets li { margin-bottom: 0.5rem; }
+.job-bullets li::marker { color: var(--color-muted); }
+.job-bullets strong { color: #fff; }
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags li {
+  border: 1px solid var(--color-muted);
+  border-radius: 20px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+/* -------- SCROLL REVEAL (only active when JS runs) -------- */
+.js .reveal,
+.js .job {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.js .reveal.in,
+.js .job.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
 }
 
 /* -------- MOBILE FRIENDLY -------- */
@@ -187,6 +388,10 @@ a:hover {
     margin-right: 1rem;
   }
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
+  .job-meta { text-align: left; }
+  .timeline { padding-left: 1.25rem; }
+  .job::before { left: calc(-1.25rem - 8px); }
+  .job { padding: 1.1rem; }
 }
