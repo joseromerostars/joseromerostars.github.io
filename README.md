@@ -1,6 +1,6 @@
 # Jose Romero
 
-Access site here: https://joseromerostars.github.io/
+Access site here <a href="https://joseromerostars.github.io/" target="_blank" rel="noopener noreferrer">here</a>.
 
 **Full-stack developer** — building efficient tools that solve real problems, and teaching others how to do the same.
 
