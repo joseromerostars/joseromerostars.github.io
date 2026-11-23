@@ -1,36 +1,45 @@
-# Portfolio Starter Template
+# Jose Romero — Portfolio
 
-A simple, editable personal portfolio built with plain HTML and CSS, ready to host for free on GitHub Pages.
+Personal portfolio for Jose Romero, a software developer, mentor, and pitch presenter based in Milwaukee, WI. Built with plain HTML, CSS, and a little vanilla JavaScript, and hosted on GitHub Pages.
+
+## What's on the site
+- **Hero** — intro, call-to-action buttons, and a stats strip (400+ CS students mentored, 1 of 4 teams won the pitch, 3 orgs, 10-week Python course).
+- **About** — background, career path, and a skills list (HTML, CSS, JavaScript, TypeScript, Git & GitHub, Java, MySQL, Python, Data Structures & Algorithms, Wireframing, Code Review, Technical Mentoring).
+- **Experience** — timeline of roles:
+  - Intern, i.c.stars (Aug 2026 – Present)
+  - Tech Fellow, CodePath (Jan 2025 – Feb 2026)
+  - Account Coordinator, The Trade Desk (Jun 2022 – Aug 2023)
+- **Projects** — Affirmation Generator (HTML/CSS/JS), Scrunch (Java), and Oro (Java, in development).
+- **Contact** — email, GitHub, and LinkedIn links.
 
 ## Files
-- `index.html` — your page content (what it says)
-- `styles.css` — your page styling (how it looks)
+- `index.html` — page content and the small script for scroll-reveal and count-up numbers
+- `styles.css` — all styling; colors are defined as variables under `:root` at the top
 - `README.md` — this file
 
-## Step 1 — Make it yours (edit on your computer)
-1. Open `index.html` in a text editor (VS Code).
-2. Find every `[SQUARE BRACKET]` placeholder and replace it with your info. Tip: search the file for `REPLACE`.
-3. Open `index.html` in your browser to preview. Edit → save → refresh to see changes.
-4. Want different colors? Open `styles.css` and change the values under `:root` at the top.
+## Run locally
+No build step or dependencies. Open `index.html` in a browser, edit, save, and refresh. Or serve the folder:
 
-## Step 2 — Put it on GitHub
-1. Go to github.com and click **New repository**.
-2. Name it **`your-username.github.io`** (use YOUR GitHub username exactly). This special name makes it your main site.
-3. Set it to **Public**. Click **Create repository**.
-4. On the new repo page, click **uploading an existing file**.
-5. Drag in `index.html` and `styles.css`, then write a commit message like `Add portfolio starter files` and click **Commit changes**.
+```
+python -m http.server 8000
+```
 
-## Step 3 — Turn on GitHub Pages
-1. In your repo, go to **Settings** → **Pages** (left sidebar).
-2. Under **Branch**, select **`main`** and the **`/ (root)`** folder. Click **Save**.
-3. Wait 1–2 minutes, then visit **`https://your-username.github.io`**. Your site is live!
+Then visit `http://localhost:8000`.
 
-## Always-on habits (graded)
+## Editing tips
+- **Experience:** copy a `<li class="job">` block in the `timeline` list and update the title, company, dates, bullets, and tags.
+- **Projects:** copy an `<article class="project-card">` inside `project-grid`.
+- **Stats:** numbers with a `data-count` attribute animate on load; `data-suffix` adds trailing text (e.g. `+`).
+- **Colors:** change the variables under `:root` in `styles.css`.
+- **Accessibility:** the animations are skipped when the visitor has `prefers-reduced-motion` enabled, and the page works without JavaScript.
+
+## Deployment
+The site is served by GitHub Pages from the `main` branch, `/ (root)` folder (**Settings → Pages**). The repo must be named `<username>.github.io` for the site to be served at the root URL. Pushes to `main` go live within a minute or two.
+
+## Conventions
 - Write clear commit messages that say what changed (`Update about section`, not `stuff`).
-- Keep filenames lowercase with no spaces (`styles.css`, not `My Styles.css`).
-- Commit often — small, frequent commits beat one giant one.
+- Keep filenames lowercase with no spaces.
+- Commit small and often.
 
-## Troubleshooting
-- **Page is blank / unstyled:** check that `styles.css` is spelled exactly right in the `<link>` tag and uploaded to the repo.
-- **404 error:** make sure the repo is named `your-username.github.io` and is Public, and give it 2 minutes.
-- **Changes not showing:** hard-refresh your browser (Ctrl+Shift+R / Cmd+Shift+R).
+## Contact
+[Email](mailto:josedanilromero@gmail.com) · [GitHub](https://github.com/jdrome) · [LinkedIn](https://linkedin.com/in/josedanilromero)
