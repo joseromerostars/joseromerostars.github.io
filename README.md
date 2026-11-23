@@ -1,45 +1,43 @@
-# Jose Romero — Portfolio
+# Jose Romero
 
-Personal portfolio for Jose Romero, a software developer, mentor, and pitch presenter based in Milwaukee, WI. Built with plain HTML, CSS, and a little vanilla JavaScript, and hosted on GitHub Pages.
+**Full-stack developer** — building efficient tools that solve real problems, and teaching others how to do the same.
 
-## What's on the site
-- **Hero** — intro, call-to-action buttons, and a stats strip (400+ CS students mentored, 1 of 4 teams won the pitch, 3 orgs, 10-week Python course).
-- **About** — background, career path, and a skills list (HTML, CSS, JavaScript, TypeScript, Git & GitHub, Java, MySQL, Python, Data Structures & Algorithms, Wireframing, Code Review, Technical Mentoring).
-- **Experience** — timeline of roles:
-  - Intern, i.c.stars (Aug 2026 – Present)
-  - Tech Fellow, CodePath (Jan 2025 – Feb 2026)
-  - Account Coordinator, The Trade Desk (Jun 2022 – Aug 2023)
-- **Projects** — Affirmation Generator (HTML/CSS/JS), Scrunch (Java), and Oro (Java, in development).
-- **Contact** — email, GitHub, and LinkedIn links.
+**Role Description:** Software developer and technical mentor in Milwaukee, WI. I'm currently an intern at i.c.stars, designing software for a real client. Before that I was a Tech Fellow at CodePath, where I mentored 400+ CS students and contributed production Python. I started my career in digital advertising at The Trade Desk, then taught myself to code.
 
-## Files
-- `index.html` — page content and the small script for scroll-reveal and count-up numbers
-- `styles.css` — all styling; colors are defined as variables under `:root` at the top
-- `README.md` — this file
+**What I built:** I like building small, purposeful tools: web apps that make a habit easier, games that remix a classic, and software that makes messy data easier to use. My work spans front-end pages in HTML, CSS, and JavaScript, Java applications, and Python in production code. Right now I'm designing an ITIL ticket analytics web app and scoping a RAG-based natural-language ticket search.
 
-## Run locally
-No build step or dependencies. Open `index.html` in a browser, edit, save, and refresh. Or serve the folder:
+**How I work:** I learn by building, then explain what I learned.
+- **Show, don't tell.** I win people over with a working demo. A wireframe-based walkthrough won my team's Sprint 1 pitch against 3 other teams.
+- **Clean, maintainable code.** I care about idiomatic patterns, modular design, and readable code, and I use code review to get there.
+- **Mentoring.** I teach through pair programming, debugging, and runtime analysis of recursion, trees, linked lists, and stacks.
+- **Data-informed.** I use trends and performance data to make decisions, a habit from my ad tech work.
 
-```
-python -m http.server 8000
-```
+## Featured Work
 
-Then visit `http://localhost:8000`.
+1. **ITIL Ticket Analytics Web App** (i.c.stars, 2026) — Wireframes and a technical demo for a client's project management teams, covering ticket lookup by ID, filtering by type, and trend views. The demo won the Sprint 1 pitch. Next up: RAG-based natural-language search limited to the client's data, with password login and Microsoft SSO.
+2. **[Affirmation Generator](https://jdrome.github.io/Affirmations-Generator/)** — A positive-affirmation practice tool built with HTML, CSS, and JavaScript.
+3. **[Scrunch](https://github.com/jdome/Scrunch)** — A remix of the classic game Snake, built with Java.
+4. **[Oro](https://github.com/jdrome/oro)** — A personal finance app, in development, built with Java.
 
-## Editing tips
-- **Experience:** copy a `<li class="job">` block in the `timeline` list and update the title, company, dates, bullets, and tags.
-- **Projects:** copy an `<article class="project-card">` inside `project-grid`.
-- **Stats:** numbers with a `data-count` attribute animate on load; `data-suffix` adds trailing text (e.g. `+`).
-- **Colors:** change the variables under `:root` in `styles.css`.
-- **Accessibility:** the animations are skipped when the visitor has `prefers-reduced-motion` enabled, and the page works without JavaScript.
+## Writing
 
-## Deployment
-The site is served by GitHub Pages from the `main` branch, `/ (root)` folder (**Settings → Pages**). The repo must be named `<username>.github.io` for the site to be served at the root URL. Pushes to `main` go live within a minute or two.
+Nothing published yet.
 
-## Conventions
-- Write clear commit messages that say what changed (`Update about section`, not `stuff`).
-- Keep filenames lowercase with no spaces.
-- Commit small and often.
+## Credentials
 
-## Contact
-[Email](mailto:josedanilromero@gmail.com) · [GitHub](https://github.com/jdrome) · [LinkedIn](https://linkedin.com/in/josedanilromero)
+- **Intern**, i.c.stars — Aug 2026 – Present
+- **Tech Fellow**, CodePath — Jan 2025 – Feb 2026 (mentored 400+ students through a 10-week Python data structures course)
+- **Account Coordinator**, The Trade Desk — Jun 2022 – Aug 2023
+- **Winner**, i.c.stars Sprint 1 pitch (1 of 4 teams)
+
+## Tech Stack
+
+- **Languages:** Python, Java, JavaScript, TypeScript, MySQL
+- **Web:** HTML, CSS
+- **Tools and practices:** Git & GitHub, Wireframing, Code Review, Technical Mentoring
+- **Computer science:** Data Structures & Algorithms
+- **Exploring:** RAG, Microsoft SSO, ITIL
+
+---
+
+[Email](mailto:josedanilromero@gmail.com) · [LinkedIn](https://linkedin.com/in/josedanilromero) · Milwaukee, WI
