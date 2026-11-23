@@ -1,5 +1,7 @@
 # Jose Romero
 
+Access site here: https://joseromerostars.github.io/
+
 **Full-stack developer** — building efficient tools that solve real problems, and teaching others how to do the same.
 
 **Role Description:** Software developer and technical mentor in Milwaukee, WI. I'm currently an intern at i.c.stars, designing software for a real client. Before that I was a Tech Fellow at CodePath, where I mentored 400+ CS students and contributed production Python. I started my career in digital advertising at The Trade Desk, then taught myself to code.
